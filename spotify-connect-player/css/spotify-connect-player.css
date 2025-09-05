@@ -1,0 +1,173 @@
+#spotify-player-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #181818; /* Dark background like Spotify */
+    color: #b3b3b3; /* Light gray text */
+    font-family: 'Circular Std', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.player-left {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.album-art img {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+.track-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.track-info h3 {
+    margin: 0;
+    font-size: 0.9em;
+    color: #fff; /* White for track title */
+}
+
+.track-info p {
+    margin: 0;
+    font-size: 0.7em;
+    color: #b3b3b3;
+}
+
+.player-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 2;
+}
+
+.controls button {
+    background: none;
+    border: none;
+    color: #b3b3b3;
+    cursor: pointer;
+    margin: 0 8px;
+    padding: 0;
+}
+
+.controls button svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.controls button:hover {
+    color: #fff;
+}
+
+.timeline {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.timeline span {
+    font-size: 0.7em;
+    color: #b3b3b3;
+    margin: 0 5px;
+}
+
+.timeline input[type="range"] {
+    flex-grow: 1;
+    -webkit-appearance: none;
+    height: 4px;
+    background: #535353; /* Darker gray for progress bar background */
+    border-radius: 2px;
+    outline: none;
+}
+
+.timeline input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #1db954; /* Spotify green */
+    cursor: pointer;
+}
+
+.player-right {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+    position: relative; /* For positioning vertical slider */
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.volume-control input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 4px;
+    background: #535353;
+    border-radius: 2px;
+    outline: none;
+}
+
+.volume-control input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #1db954;
+    cursor: pointer;
+}
+
+.volume-control button svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+#vertical-volume-slider {
+    position: absolute;
+    bottom: 70px; /* Adjust based on button height */
+    right: 0;
+    width: 40px;
+    height: 150px; /* Height of the vertical slider */
+    background-color: #282828;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0; /* Keep padding for now, might adjust later */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 100; /* Ensure it's above other elements */
+}
+
+#vertical-volume-slider input[type="range"] {
+    width: 130px; /* Adjusted to take more height when rotated */
+    height: 4px; /* This will be the width when oriented vertically */
+    -webkit-appearance: none;
+    background: #535353;
+    border-radius: 2px;
+    outline: none;
+    transform: rotate(-90deg); /* Rotate for vertical orientation */
+    transform-origin: 50% 50%; /* Ensure rotation is from the center */
+}
+
+.player-right {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+    position: relative; /* For positioning vertical slider */
+}

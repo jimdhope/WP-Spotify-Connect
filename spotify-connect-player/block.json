@@ -1,0 +1,28 @@
+{
+    "apiVersion": 2,
+    "name": "spotify-connect/player",
+    "title": "Spotify Connect Player",
+    "category": "widgets",
+    "editorScript": "file:./js/spotify-connect-player-editor.js",
+    "editorStyle": "file:./css/spotify-connect-player.css",
+    "style": "file:./css/spotify-connect-player.css",
+    "render": "file:./includes/class-spotify-connect-block.php",
+    "attributes": {
+        "colorScheme": {
+            "type": "string",
+            "default": "#181818"
+        },
+        "prevIcon": {
+            "type": "string",
+            "default": "default-prev"
+        },
+        "playIcon": {
+            "type": "string",
+            "default": "default-play"
+        },
+        "nextIcon": {
+            "type": "string",
+            "default": "default-next"
+        }
+    }
+}
